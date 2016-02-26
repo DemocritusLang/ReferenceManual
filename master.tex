@@ -1,0 +1,39 @@
+% file: master.tex
+
+\documentclass{report}
+
+\usepackage{subfiles}
+\usepackage{fullpage}
+\usepackage{listings}
+\usepackage{color}
+\setcounter{secnumdepth}{1} % only chapter and sections will be numbered
+\setcounter{tocdepth}{3}    % entries down to \subsubsections in the TOC
+
+\definecolor{mygray}{rgb}{0.95,0.95,0.95}
+\lstset { %
+		backgroundcolor=\color{mygray}, 
+		basicstyle=\fontfamily{pcr}\selectfont\normalsize,
+		breaklines=true,
+		language = C++,
+		numbers=none,
+    tabsize=2
+}
+
+\author{Amy Xu \\ \small{xx2152} \and Emily Pakulski \\ \small{enp2111} \and Amarto Rajaram \\ \small{aar2160} \and Kyle Lee\\ \small{kpl2111}}
+\title{Democritus Language Reference Manual}
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\pagebreak
+	
+	\input{tex/introduction}
+    \input{tex/types}
+    \input{tex/lexical_conventions}
+    \input{tex/expressions_operators}
+    \input{tex/statements}
+    \input{tex/functions}
+    \input{tex/concurrency}
+
+
+\end{document}
