@@ -128,4 +128,32 @@ z int = 8;
 x int[5] = {0,1,2,3,4};
 y int = x[2];  			/* y = 2 */
 		\end{lstlisting}
-		
+    \section{Operator Precedence and Associativity}
+        \begin{tabular}{ | l | l | l | l | }
+\hline
+	Precedence  & Operator      & Description & Associativity \\ \hline
+	1 & \texttt{()} & Parenthesis        & Left-to-right \\ \hline
+    2 & \texttt{()} & Function call      & Left-to-right \\
+      & \texttt{[]} & Array creation     &               \\ 
+      & \texttt{[]} & Array subscript    &               \\ \hline
+    3 & \texttt{*}  & Dereference        & Right-to-left \\ 
+      & \texttt{\&} & Address-of         &               \\
+      & \texttt{!}  & Negation           &               \\
+      & \texttt{-}  & Unary minus        &               \\ \hline
+    4 & \texttt{*}  & Multiplication     & Left-to-right \\ 
+      & \texttt{/}  & Division           &               \\
+      & \texttt{\%} & Modulo             &               \\ \hline
+    5 & \texttt{+}  & Addition           & Left-to-right \\
+      & \texttt{-}  & Subtraction        &               \\ \hline
+    6 & \texttt{\textgreater \textgreater} & Bitwise shift shift right & Left-to-right \\
+      & \texttt{\textless \textless} & Bitwise shift left & \\ \hline
+    7 & \texttt{\textgreater \textgreater} = & For relational $>$ and $\geq$ respectively & Left-to-right \\
+      & \texttt{\textless \textless =}& For relational $<$ and $\leq$ respectively & \\ \hline
+    8 & \texttt{==} \texttt{!=} & For relational $=$ and $\neq$ respectively & Left-to-right \\\hline
+    9 & \texttt{\&\&} & Logical \texttt{and} & Left-to-right \\ \hline
+    10 & \texttt{\textbar \textbar}&  Logical \texttt{or} & Left-to-right \\ \hline
+    11 & \texttt{=} & Assignment & Right-to-left \\ \hline
+
+\end{tabular}
+
+
