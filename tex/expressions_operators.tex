@@ -4,7 +4,20 @@
 		
 		\begin{lstlisting}
 x float = 4.0;
-y int = 5/2 + 1; /* y = 3 */
+y int = 5/2 + 1; 	/* y = 3 */
+		\end{lstlisting}
+		
+		\noindent Array assignment is done with Java-like syntax. Note that the size of the array must be specified in the declaration. 
+		
+		\begin{lstlisting}
+x int[5] = {0,1,2,3,4};
+		\end{lstlisting}
+		
+		\noindent Pointer types are denoted with a \texttt{*} which must be attached to the primitive type that they reference.
+		
+		\begin{lstlisting}
+x int  = 4;   /* x = 4  */
+y int* = &x;  /* *y = 4 */
 		\end{lstlisting}
 		
 	\section{Arithmetic Operations}
@@ -20,13 +33,14 @@ y = y-x 	/* y = -4 */
 			\end{lstlisting}
 						
 		\subsection{Multiplication}
+			Multiplication follows the same rules as well. 
 			\begin{lstlisting}
 x int = 4;
 y int = 2;
 x = x*y+y; /* x = 10 */
 			\end{lstlisting}
 			
-			\noindent Multiplication follows the same rules as well. 
+
 		\subsection{Division}
 			Democritus will default to integer division, unless both types provided are floats. 
 			\begin{lstlisting}
@@ -38,6 +52,73 @@ a float = 4.0;
 b float = 2.0;
 a = b/a; 	/* a = 2.0 approximately */
 			\end{lstlisting}
+
+        \subsection{Modulus}
+            The remainder of an integer division operation can be accessed via the modulo \texttt{\%} operator. 
+            \begin{lstlisting}
+x int = 8;
+y int = 5;
+x = x%y; 	/* x = 3  */
+			\end{lstlisting}
+	
+		\subsection{Bit Shifting}
+			Integers can be bit-shifted with \texttt{\textgreater\textgreater} and \texttt{\textless\textless}.
+			\begin{lstlisting}
+x int = 9;
+y int = x>>1;  /* y = 4  */
+x = y<<2; 	   /* x = 16 */
+			\end{lstlisting}
+		
+	\section{Boolean Expressions}
+		Democritus features all of the standard logical operators, following Java-style syntax. Each expression will return a boolean value of true or false.
+
+        \subsection{Equality}
+            Equality is tested with the \texttt{==} operator. Inequality is tested with \texttt{!=}. 
+            \begin{lstlisting}
+x int = 8;
+y int = 8;
+z boolean = (x==y);  	/* z = true  */
+z = (x==(y+1));         /* z = false */
+z = (x!=(y+1));         /* z = true  */
+			\end{lstlisting}
 			
-	\section{Boolean Expression}
-		Democritus 
+		\subsection{Negation}
+			Negation is done with \texttt{!}, a unary operation.
+
+        \subsection{Comparison}
+            Democritus also features the \texttt{\textless}, \texttt{\textless =}, \texttt{\textgreater}, and \texttt{\textgreater =} operators.  
+            
+            \begin{lstlisting}
+x int = 9;
+y int = 8;
+z int = 8;
+
+x>y;    /* true */
+y>=z;   /* true */
+z<x;    /* true */
+            \end{lstlisting}
+
+        \subsection{Chained Expressions}
+            Boolean expressions can be chained with \texttt{\&\&} and \texttt{\textbar\textbar}, representing \texttt{and} and \texttt{or}, respectively. These operators have lower precedence than any of the other boolean operators described above. The \texttt{and} operator has a higher precedence than \texttt{or}.
+
+            \begin{lstlisting}
+x int = 9;
+y int = 8;
+z int = 8;
+
+(x>y && y<x);    		/* false */
+(x>y || y<x);  	 		/* true */
+(x>y && y<x || z==y)    /* true */
+            \end{lstlisting}
+            
+	\section{Pointers and References}
+		Pointers and dereferencing utilizes the same syntax as C. The unary operator \texttt{\&} gives a variables address in memory, and the operator \texttt{*} dereferences a pointer. See the assignment section for usage.
+		
+	\section{Array access}
+		Array access is done with \texttt{[\textit{i}]} where \textit{i} is the index being accessed. 
+		
+		\begin{lstlisting}
+x int[5] = {0,1,2,3,4};
+y int = x[2];  			/* y = 2 */
+		\end{lstlisting}
+		
