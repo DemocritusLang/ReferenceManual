@@ -3,7 +3,8 @@
     \begin{itemize}
         \item a literal value
         \item a variable name
-        \item an operand-operator-operand or operand-operator sequence
+        \item a binary operation
+        \item a unary operation
         \item array access 
     \end{itemize}
     \section{Assignment}
@@ -134,7 +135,7 @@ y int = x[2];  			/* y = 2 */
 	Precedence  & Operator      & Description & Associativity \\ \hline
 	1 & \texttt{()} & Parenthesis        & Left-to-right \\ \hline
     2 & \texttt{()} & Function call      & Left-to-right \\
-      & \texttt{[]} & Array creation     &               \\ 
+      & \texttt{\{\}} & Array creation     &               \\ 
       & \texttt{[]} & Array subscript    &               \\ \hline
     3 & \texttt{*}  & Dereference        & Right-to-left \\ 
       & \texttt{\&} & Address-of         &               \\
