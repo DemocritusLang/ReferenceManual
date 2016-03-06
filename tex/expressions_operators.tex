@@ -1,11 +1,11 @@
 \chapter{Expressions and Operators}
-	An expression consists a combination of any of the following:
+	An expression consists of a combination of any of the following:
     \begin{itemize}
         \item a literal value
         \item a variable name
         \item a binary operation
         \item a unary operation
-        \item array access 
+        \item a C-style array access operation
     \end{itemize}
     \section{Assignment}
 		Assignment is done with \texttt{=}. As mentioned above, variables and declared with the \texttt{varname vartype} syntax. Variables can be assigned to a single value or to the result of an expression. 
@@ -36,8 +36,8 @@ y int* = &x;  /* *y = 4 */
 			\begin{lstlisting}
 x int = 4;
 y int = 2;
-x = x+y; 	/* x = 6  */
-y = y-x 	/* y = -4 */
+x = x + y; 	/* x = 6  */
+y = y - x 	/* y = -4 */
 			\end{lstlisting}
 						
 		\subsection{Multiplication}
@@ -45,7 +45,7 @@ y = y-x 	/* y = -4 */
 			\begin{lstlisting}
 x int = 4;
 y int = 2;
-x = x*y+y; /* x = 10 */
+x = x * y + y; /* x = 10 */
 			\end{lstlisting}
 			
 
@@ -54,15 +54,15 @@ x = x*y+y; /* x = 10 */
 			\begin{lstlisting}
 x int = 5;
 y int = 2;
-x = x/y; 	/* x = 2  */
+x = x / y; 	/* x = 2  */
 
 a float = 4.0;
 b float = 2.0;
-a = b/a; 	/* a = 2.0 approximately */
+a = b / a; 	/* a = 2.0 approximately */
 			\end{lstlisting}
 
         \subsection{Modulus}
-            The remainder of an integer division operation can be accessed via the modulo \texttt{\%} operator. 
+            The remainder of an integer division operation can be computed via the modulo \texttt{\%} operator.
             \begin{lstlisting}
 x int = 8;
 y int = 5;
@@ -85,9 +85,9 @@ x = y<<2; 	   /* x = 16 */
             \begin{lstlisting}
 x int = 8;
 y int = 8;
-z boolean = (x==y);  	/* z = true  */
-z = (x==(y+1));         /* z = false */
-z = (x!=(y+1));         /* z = true  */
+z boolean = (x == y);		/* z = true  */
+z = (x == (y + 1));			/* z = false */
+z = (x != (y + 1));			/* z = true  */
 			\end{lstlisting}
 			
 		\subsection{Negation}
@@ -114,13 +114,13 @@ x int = 9;
 y int = 8;
 z int = 8;
 
-(x>y && y<x);    		/* false */
-(x>y || y<x);  	 		/* true */
-(x>y && y<x || z==y)    /* true */
+(x>y && y<x);			/* false */
+(x>y || y<x);			/* true */
+(x>y && y<x || z==y)	/* true */
             \end{lstlisting}
             
 	\section{Pointers and References}
-		Pointers and dereferencing utilizes the same syntax as C. The unary operator \texttt{\&} gives a variables address in memory, and the operator \texttt{*} dereferences a pointer. See the assignment section for usage.
+		Pointers and dereferencing operations utilize the same syntax as C. The unary operator \texttt{\&} gives a variables address in memory, and the operator \texttt{*} dereferences a pointer. See the assignment section for usage.
 		
 	\section{Array access}
 		Array access is done with \texttt{[\textit{i}]} where \textit{i} is the index being accessed. 

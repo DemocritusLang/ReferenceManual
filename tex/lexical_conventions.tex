@@ -5,9 +5,9 @@
 		Identifiers for Democritus will be defined in the same way as they are in most other languages; any sequence of letters and numbers without whitespaces and is not a keyword will be parsed as an identifier. Note that, as in other languages, identifiers cannot begin with a number. Somewhat different, however, is the order of variable declarations; in Democritus, declarations are made following the \textit{varname vartype} structure. 
 		
 	\begin{lstlisting}
-2wrongID int; 	/* Not a valid identifier */
-mySecond float;	/* Valid */
-my_Second char; /* Valid */
+2wrongID int;		/* not a valid identifier declaration */
+mySecond float;		/* valid */
+my_Second char;		/* valid */
 	\end{lstlisting}
 	
 	\section{Keywords}
@@ -35,14 +35,10 @@ atomic
 		
 	\section{Punctuation}
 		\subsection{;}
-			Similarly to C, the semicolon `;' is required to terminate any statement in Democritus. 
+			As in C, the semicolon `;' is required to terminate any statement in Democritus. 
 		\subsection{\{ and \}}
-			For the sake of keeping the language free-format, curly braces are used to delineate between separate and nested blocks. These braces are required even for single-statement conditional and iteration loops. 
+			In order to keep the language free-format, curly braces are used to delineate separate and nested blocks. These braces are required even for single-statement conditional and iteration loops.
 		\subsection{( and )}
 			To assert precedence, expressions may be encapsulated within parentheses to guarantee order of operations. 
 		\subsection{Comments}
 			For now, comments are initiated with \texttt{/*} and closed with \texttt{*/}. They cannot be nested.
-
-			
-			
-			

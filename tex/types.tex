@@ -5,14 +5,14 @@
         \subsection{float}
             A 64-bit floating precision number, represnted in the IEEE 754 format.            
         \subsection{char}
-            An 8-bit ASCII character.  
+            An 8-bit ASCII character. We include the extended ASCII set, so we use all 256 possible values.
         \subsection{boolean}
-            A 1-bit boolean may take a true or false value. 
+            A 1-bit true or false value.
         \subsection{pointer}
-            An 64-bit pointer holds the value to a location in memory; they operate similarly to those found in C.
+            A 64-bit pointer that holds the value to a location in memory; very similar to those found in C.
     \section{Complex Types}
         \subsection{Array}
-            A fixed-size array, allocated on the stack (thus requiring the size to be defined at declaration) of other primitive types. An array object can be accessed by C array notation, such as \texttt{list1[0]}. 
+            A fixed-size array, allocated on the stack and containing other primitive types. The size must be defined at declaration. An array object can be accessed by C array notation, such as \texttt{list1[0]}.
  \iffalse       \subsection{struct}
             A struct is a simple user-defined data structure that holds various primitives, similar to the ones found in C. 
  \fi
