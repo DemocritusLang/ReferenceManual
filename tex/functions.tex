@@ -1,12 +1,11 @@
 \chapter{Functions}
     \section{Overview}
-        Functions can be defined in Democritus to return one or no data type.  Functions are evaluated via eager evaluation and the function implementation must directly follow the function header.
-        
+        Functions can be defined in Democritus to return one or no data type.  Functions are evaluated via eager evaluation and the function implementation must directly follow the function header. The syntax is reminiscent of Scala, although Democritus doesn't support implied returns.
         \vspace{5mm}
         \noindent A function appears in the form:
         
         \begin{lstlisting}
-function [function name]([type:formal_arg, ... ]):[return type]{
+function [function name]([formal_arg: type, ... ]): type {
     [function implementation]
     return [variable of return type]
 }
@@ -18,10 +17,10 @@ function [function name]([type:formal_arg, ... ]):[return type]{
         \noindent Functions may be recursive and call themselves:
 
         \begin{lstlisting}
-function recursive_func(i:int):void{
-    if(i < 0){
+function recursive_func(i: int): void {
+    if (i < 0) {
         return;
-    }else{   
+    } else {
         print “hi”;
         recursive_fun(i-1);
     }
@@ -32,8 +31,8 @@ function recursive_func(i:int):void{
         \noindent Functions may be called within other functions:
         \begin{lstlisting}
 
-function main():void{
-    recursive(3);
+function main(): void{
+    recursive_func(3);
     return;
 }
         \end{lstlisting}
