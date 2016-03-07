@@ -24,6 +24,7 @@
 
 		\begin{lstlisting}
 	}
+	
 function [function name]([formal_arg atomic type]) atomic type {
 	formal_arg.lock();
 	/* do something */
@@ -44,6 +45,6 @@ function [function name]([formal_arg atomic type]) atomic type {
 		The \texttt{detach} boolean determines whether or not the parent thread will be able to join on the thread or not.
 		\begin{lstlisting}
         {	
-thread(f function, boolean detach, [arg1 type, arg2 type, ...]) int;
+		thread(f function, boolean detach, [arg1 type, arg2 type, ...]) int;
 	}
 		\end{lstlisting}
