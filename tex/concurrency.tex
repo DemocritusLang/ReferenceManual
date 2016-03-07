@@ -11,10 +11,10 @@
 
 		\begin{lstlisting}
 	}
-		x: int;
+		x int;
 		x.lock(); x.unlock();	/* undefined! */
 
-		y: atomic int;
+		y atomic int;
 		y.lock(); y.unlock();	/* defined! */
 }
 		\end{lstlisting}
@@ -24,7 +24,7 @@
 
 		\begin{lstlisting}
 	}
-function [function name]([formal_arg: atomic type]): atomic type {
+function [function name]([formal_arg atomic type]) atomic type {
 	formal_arg.lock();
 	/* do something */
 	formal_arg.unlock();
@@ -44,6 +44,6 @@ function [function name]([formal_arg: atomic type]): atomic type {
 		The \texttt{detatch} boolean determines whether or not the parent thread will be able to join on the thread or not.
 		\begin{lstlisting}
 	}
-thread(f: function, boolean: detatch, [arg1: type, arg2: type, ...]) int;
+thread(f function, boolean detatch, [arg1 type, arg2 type, ...]) int;
 	}
 		\end{lstlisting}}

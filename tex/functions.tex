@@ -5,7 +5,7 @@
         \noindent A function appears in the form:
         
         \begin{lstlisting}
-function [function name]([formal_arg: type, ... ]): type {
+function [function name]([formal_arg type, ... ]) type {
     [function implementation]
     return [variable of return type]
 }
@@ -17,7 +17,7 @@ function [function name]([formal_arg: type, ... ]): type {
         \noindent Functions may be recursive and call themselves:
 
         \begin{lstlisting}
-function recursive_func(i: int): void {
+function recursive_func(i int) void {
     if (i < 0) {
         return;
     } else {
@@ -31,7 +31,7 @@ function recursive_func(i: int): void {
         \noindent Functions may be called within other functions:
         \begin{lstlisting}
 
-function main(): void{
+function main() void{
     recursive_func(3);
     return;
 }
@@ -41,6 +41,6 @@ function main(): void{
     \section{Built-in Functions}
         A handful of functions are natively built into Democritus for user flexibility and ease of usage. There are:
         \begin{itemize}
-            \item print(s:string): takes in a string (standard library functions will convert from other data types to strings)
-            \item thread(f: function, [arg1: type, arg2: type, ...]): takes in function and function args
+            \item print(s string) takes in a string (standard library functions will convert from other data types to strings)
+            \item thread(f function, [arg1 type, arg2 type, ...]) takes in function and function args
         \end{itemize}
