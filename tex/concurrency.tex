@@ -41,9 +41,9 @@ function [function name]([formal_arg atomic type]) atomic type {
 
 		To spawn a thread, the thread function takes a variable number of arguments where the first argument is a function and the remaining optional arguments are the arguments for that function. It returns an error code.
 
-		The \texttt{detatch} boolean determines whether or not the parent thread will be able to join on the thread or not.
+		The \texttt{detach} boolean determines whether or not the parent thread will be able to join on the thread or not.
 		\begin{lstlisting}
 	}
-thread(f function, boolean detatch, [arg1 type, arg2 type, ...]) int;
+thread(f function, boolean detach, [arg1 type, arg2 type, ...]) int;
 	}
 		\end{lstlisting}}
